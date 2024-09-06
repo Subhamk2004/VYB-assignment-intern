@@ -46,7 +46,7 @@ export default function Home() {
           className="w-full h-auto"
         >
           <source src="/assets/videos/mainVid.mp4" />
-          Your browser doesn't support video tag try updating your browser or switch to latest firefox browser
+          Your browser does not support video tag try updating your browser or switch to latest firefox browser
         </video>
         <section className="features w-full p-4 flex flex-row justify-center">
           <ul className="flex flex-row px-12 items-center justify-between w-4/5 py-4 rounded-2xl shadow-xl shadow-gray-300 max-w-[1000px]">
@@ -131,7 +131,7 @@ export default function Home() {
             <div className="text-white h-auto bg-[#003c3c] rounded-2xl p-3 sticky top-4 mt-32 flex flex-col">
               <h2 className="text-2xl font-bold">Start Vybing with us!</h2>
               <p className="mt-3 mb-7">
-                "We help influencers make money by monetizing their travel plans, merchandise, and digital goods and many more."
+                We help influencers make money by monetizing their travel plans, merchandise, and digital goods and many more
               </p>
               <button className="pb-1">
                 <img src="/assets/images/sec3Button.png"
@@ -184,7 +184,7 @@ export default function Home() {
 
             <div className="mt-32 w-full rounded-2xl md:p-4 lg:p-8 bg-[#e5f0f1] flex flex-col items-center ">
               <p className="font-bold md:text-lg lg:text-2xl mb-5">
-                "Monetize your influencer status: Earn money adding real value to your true followers!"
+                Monetize your influencer status: Earn money adding real value to your true followers!
               </p>
               <p className="mb-5 lg:text-xl">
                 Let VYB the money now !! Its here and widthdraw it periodically.
@@ -262,7 +262,7 @@ export default function Home() {
 
         <section className="section2 h-4/5 w-full flex flex-col items-center p-[4%] max-p-[100px] mt-16 pb-[80px]">
           <h2 className="text-2xl font-bold text-[#003c3c]">FREQUENTLY ASKED QUESTIONS</h2>
-          <p className="mt-3 text-center lg:text-lg ">Quick answers to questions you may have. Can’t find what you're looking for?<br />
+          <p className="mt-3 text-center lg:text-lg ">Quick answers to questions you may have. Can not find what you are looking for?<br />
             Check out our full documentation</p>
 
           <div className="w-4/5 max-w-[800px] mt-5">

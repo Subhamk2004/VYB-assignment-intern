@@ -76,7 +76,7 @@ function Login() {
                             Login
                         </button>
 
-                        <p className='mt-4'>Dont't have an account?</p>
+                        <p className='mt-4'>Do not have an account?</p>
 
                         <Link href='/signup' className=' mt-3 p-2 px-8 border border-[#003c3c] bg-[#003c3c] rounded-2xl text-xl font-bold text-white'>Sign up</Link>
                     </div>
