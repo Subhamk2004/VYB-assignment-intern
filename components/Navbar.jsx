@@ -10,11 +10,14 @@ const Navbar = () => {
         <nav className="w-4/5 max-w-[1200px] rounded-3xl backdrop-filter backdrop-blur-lg bg-opacity-30 bg-gray-400 border border-gray-200 py-2 px-3 flex flex-row items-center justify-between mt-3 fixed z-10">
 
             <div className="w-4/5 flex flex-row items-center justify-between">
-                <img
-                    src="/assets/images/logo.png"
-                    alt="webiste  logo"
-                    className="h-10 w-14"
-                />
+                <Link href='/'>
+                    <img
+                        src="/assets/images/logo.png"
+                        alt="webiste  logo"
+                        className="h-10 w-14"
+                    />
+                </Link>
+
                 <div className="w-2/5 bg-white rounded-3xl p-2 flex flex-row">
                     <img
                         src="/assets/images/search.png"
@@ -77,7 +80,7 @@ const Navbar = () => {
                             >
                                 Profile
                             </Link>
-                            <Link href="https://gmail.com"
+                            <Link href="/login"
                                 className="hover:bg-gray-500 py-2 hover:text-white hover:font-bold px-7 rounded-2xl"
                             >
                                 Login

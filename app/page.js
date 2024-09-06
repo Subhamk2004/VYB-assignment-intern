@@ -1,5 +1,4 @@
 'use client'
-import Navbar from "@/components/Navbar";
 import { useState, useEffect } from "react";
 import CustomRangeInput from "@/components/Slider";
 
@@ -38,7 +37,6 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center">
-      <Navbar />
       <main className="w-full flex flex-col items-center h-screen mt-24">
         <video
           autoPlay

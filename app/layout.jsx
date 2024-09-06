@@ -1,5 +1,6 @@
 import { Urbanist } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 const urbanist = Urbanist({ subsets: ["latin"] });
 
@@ -12,8 +13,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`bg-white text-black w-screen h-auto ${urbanist.className}`}
+        className={`bg-white text-black w-screen h-auto ${urbanist.className} flex flex-col items-center`}
       >
+        <Navbar />
         {children}
       </body>
     </html>
