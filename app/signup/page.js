@@ -95,7 +95,7 @@ function Signup() {
                                 </h3>
                                 <div className='w-full flex flex-row justify-center gap-4 mt-2'>
 
-                                    <Link href='/creatorForm' className='p-2 font-bold rounded-lg border border-black px-5'>Yes</Link>
+                                    <Link href='/verifyCreator' className='p-2 font-bold rounded-lg border border-black px-5'>Yes</Link>
                                     <button className='p-2 font-bold rounded-lg border border-black px-5'
                                         onClick={() => {
                                             setIsCreator(!isCreator)
