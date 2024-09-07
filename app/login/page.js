@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -14,6 +14,19 @@ const login = z.object({
 
 function Login() {
     const router = useRouter();
+    const [showProfileNav, setShowProfileNav] = useState(false);
+
+    useEffect(() => {
+        const checkScreenSize = () => {
+            setShowProfileNav(window.innerWidth > 640);
+        };
+
+        checkScreenSize();
+
+        window.addEventListener('resize', checkScreenSize);
+
+        return () => window.removeEventListener('resize', checkScreenSize);
+    }, []);
 
     const {
         register,
@@ -31,15 +44,16 @@ function Login() {
 
     return (
         <div className='mt-10 h-screen flex flex-row items-center gap-20 w-4/5 max-w-[1100px] justify-around'>
-            <img src='/assets/images/authScreen.png'
+            {showProfileNav && <img src='/assets/images/authScreen.png'
                 className='w-[40%] min-w-[300px] rounded-lg'
-            />
-            <form className=' w-3/5 flex flex-col items-center gap-5  border border-black p-4 rounded-2xl'
+            />}
+
+            <form className=' sm:w-3/5 flex flex-col items-center gap-5  border border-black p-4 rounded-2xl'
                 onSubmit={handleSubmit(onSubmit)}
             >
                 <h2 className='text-3xl font-bold'>Login</h2>
-                <img src='/assets/images/google.png'/>
-                <img src='/assets/images/or.png'/>
+                <img src='/assets/images/google.png' />
+                <img src='/assets/images/or.png' />
                 <div className=' flex flex-col w-full'>
 
                     <label htmlFor='email' className='text-2xl font-bold mt-4'>

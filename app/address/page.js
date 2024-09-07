@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ProfileNav from '@/components/ProfileNav';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -19,6 +19,19 @@ const AddressSchema = z.object({
 });
 
 export default function Address() {
+    const [showProfileNav, setShowProfileNav] = useState(false);
+
+    useEffect(() => {
+        const checkScreenSize = () => {
+            setShowProfileNav(window.innerWidth > 640);
+        };
+
+        checkScreenSize();
+
+        window.addEventListener('resize', checkScreenSize);
+
+        return () => window.removeEventListener('resize', checkScreenSize);
+    }, []);
 
     const {
         register,
@@ -34,9 +47,9 @@ export default function Address() {
 
     return (
         <div className='mt-24 w-4/5 h-auto flex flex-row items-center justify-center gap-5'>
-            <ProfileNav />
+            {showProfileNav && <ProfileNav />}
             <form
-                className='border w-full min-w-[500px] max-w-[750px] border-black rounded-2xl p-4 flex flex-col'
+                className='border w-full sm:min-w-[500px] max-w-[750px] border-black rounded-2xl p-4 flex flex-col'
                 onSubmit={handleSubmit(onSubmit)}
             >
                 <h1 className='text-3xl font-bold'>Address</h1>
@@ -65,7 +78,7 @@ export default function Address() {
                     placeholder='Enter address line 2'
                 />
 
-                <div className='flex flex-row gap-5 w-full'>
+                <div className='flex flex-col sm:flex-row gap-5 w-full'>
 
                     <label htmlFor='pincode' className='text-xl flex flex-col font-semibold mt-4'>
                         Zip Code
@@ -80,7 +93,7 @@ export default function Address() {
                         {errors.pincode && <p className='text-red-500  font-normal text-lg'>{errors.pincode.message}</p>}
                     </label>
 
-                    <label htmlFor='city' className='text-xl font-semibold mt-4 flex flex-col '>
+                    <label htmlFor='city' className='text-xl font-semibold sm:mt-4 flex flex-col '>
                         City
                         <input
                             type='text'
@@ -95,7 +108,7 @@ export default function Address() {
 
                 </div>
 
-                <div className='flex flex-row gap-5 w-full'>
+                <div className='flex flex-col sm:flex-row gap-5 w-full'>
 
                     <label htmlFor='state' className='text-xl font-semibold mt-4 flex flex-col '>
                         State
@@ -110,7 +123,7 @@ export default function Address() {
                         {errors.state && <p className='text-red-500  font-normal text-lg'>{errors.state.message}</p>}
                     </label>
 
-                    <label htmlFor='country' className='text-xl font-semibold mt-4 flex flex-col '>
+                    <label htmlFor='country' className='text-xl font-semibold sm:mt-4 flex flex-col '>
                         Country
                         <input
                             type='text'

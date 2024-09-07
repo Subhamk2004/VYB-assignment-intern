@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ProfileNav from '@/components/ProfileNav';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -19,6 +19,19 @@ const storeSchema = z.object({
 });
 
 export default function UerStore() {
+    const [showProfileNav, setShowProfileNav] = useState(false);
+
+    useEffect(() => {
+        const checkScreenSize = () => {
+            setShowProfileNav(window.innerWidth > 640);
+        };
+
+        checkScreenSize();
+
+        window.addEventListener('resize', checkScreenSize);
+
+        return () => window.removeEventListener('resize', checkScreenSize);
+    }, []);
 
     const {
         register,
@@ -35,8 +48,8 @@ export default function UerStore() {
     const [gst, setGst] = useState(true);
 
     return (
-        <div className='mt-24 w-4/5 h-auto flex flex-row justify-center gap-5'>
-            <ProfileNav />
+        <div className='mt-24 w-4/5 h-auto flex flex-row justify-center mb-10 sm:mb-0 gap-5'>
+            {showProfileNav && <ProfileNav />}
             <form
                 className='border w-full max-w-[750px] border-black rounded-2xl p-4 flex flex-col'
                 onSubmit={handleSubmit(onSubmit)}

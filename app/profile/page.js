@@ -23,13 +23,10 @@ export default function ProfilePage() {
       setShowProfileNav(window.innerWidth > 640);
     };
 
-    // Check on initial load
     checkScreenSize();
 
-    // Add event listener for window resize
     window.addEventListener('resize', checkScreenSize);
 
-    // Cleanup function to remove event listener
     return () => window.removeEventListener('resize', checkScreenSize);
   }, []);
 

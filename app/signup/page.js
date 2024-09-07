@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -20,6 +20,19 @@ const signUp = z.object({
 function Signup() {
     const [isCreator, setIsCreator] = useState(true);
     const router = useRouter();
+    const [showProfileNav, setShowProfileNav] = useState(false);
+
+    useEffect(() => {
+        const checkScreenSize = () => {
+            setShowProfileNav(window.innerWidth > 640);
+        };
+
+        checkScreenSize();
+
+        window.addEventListener('resize', checkScreenSize);
+
+        return () => window.removeEventListener('resize', checkScreenSize);
+    }, []);
 
 
     const {
@@ -38,10 +51,10 @@ function Signup() {
 
     return (
         <div className='mt-10 h-screen flex flex-row items-center gap-20 w-4/5 max-w-[1100px] justify-around'>
-            <img src='/assets/images/authScreen.png'
+            {showProfileNav && <img src='/assets/images/authScreen.png'
                 className='w-[40%] min-w-[300px] rounded-lg'
-            />
-            <form className=' w-3/5 flex flex-col items-center gap-5 border border-black p-4 rounded-2xl'
+            />}
+            <form className=' sm:w-3/5 flex flex-col items-center gap-5 border border-black p-4 rounded-2xl'
                 onSubmit={handleSubmit(onSubmit)}
             >
                 <h2 className='text-3xl font-bold'>SignUp</h2>
