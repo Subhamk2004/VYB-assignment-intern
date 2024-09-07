@@ -153,7 +153,7 @@ export default function Home() {
           <div className="flex flex-row mt-5 sm:mt-0">
             <div>
               <img src="/assets/images/seperator.png"
-                className="w-[150px] h-[2600px]"
+                className="w-[200px] sm:w-[150px] h-[2200px] sm:h-[2600px]"
               />
             </div>
             <div className=" w-auto max-w-[700px]">
@@ -165,11 +165,11 @@ export default function Home() {
                   Join us via google signin and verify your influencer status by entering you social media Id and unlock your store @ zero cost.
                 </p>
                 <img src="/assets/images/sec3Mp1.png"
-                  className="w-full max-w-[260px] h-[550px]"
+                  className="  sm:w-full  max-w-[260px] sm:h-[550px]"
                 />
               </div>
 
-              <div className="mt-24 w-full rounded-2xl md:p-4 lg:p-8 bg-[#e5f0f1] flex flex-col items-center p-4">
+              <div className="mt-16 sm:mt-24 w-full rounded-2xl md:p-4 lg:p-8 bg-[#e5f0f1] flex flex-col items-center p-4">
                 <p className="font-bold md:text-lg lg:text-2xl mb-5">
                   Build & customize your store front.
                 </p>
@@ -177,11 +177,11 @@ export default function Home() {
                   Simply fill in the details to build your digital store. Once done, start selling your products to your audience.
                 </p>
                 <img src="/assets/images/sec3Mp2.png"
-                  className="w-full max-w-[260px] h-[550px]"
+                  className="h-[420px]  sm:w-full  max-w-[260px] sm:h-[550px]"
                 />
               </div>
 
-              <div className="mt-28 w-full rounded-2xl md:p-4 p-4 lg:p-8 bg-[#e5f0f1] flex flex-col items-center ">
+              <div className="mt-16 sm:mt-28 w-full rounded-2xl md:p-4 p-4 lg:p-8 bg-[#e5f0f1] flex flex-col items-center ">
                 <p className="font-bold md:text-lg lg:text-2xl mb-5">
                   Call audience to your store. Easily integrate links into content.
                 </p>
@@ -189,11 +189,11 @@ export default function Home() {
                   After setting up your products, its time to go public. Put your store link in insta bio and lets make first post together !
                 </p>
                 <img src="/assets/images/sec3Mp3.png"
-                  className="w-full max-w-[260px] h-[550px]"
+                  className="h-[450px]  sm:w-full  max-w-[260px] sm:h-[550px]"
                 />
               </div>
 
-              <div className="mt-32 w-full rounded-2xl md:p-4 lg:p-8 bg-[#e5f0f1] flex flex-col items-center p-4">
+              <div className="mt-20 sm:mt-32 w-full rounded-2xl md:p-4 lg:p-8 bg-[#e5f0f1] flex flex-col items-center p-4">
                 <p className="font-bold md:text-lg lg:text-2xl mb-5">
                   Monetize your influencer status: Earn money adding real value to your true followers!
                 </p>
@@ -209,7 +209,7 @@ export default function Home() {
 
         </section>
 
-        <section className="section2 h-4/5 w-full flex flex-col items-center p-[4%] max-p-[100px] bg-[#e5f0f1] mt-16 pb-[80px]">
+        <section className="section2 sm:h-4/5 w-full flex flex-col items-center p-[4%] max-p-[100px] bg-[#e5f0f1] mt-16 pb-[80px]">
           <h2 className="text-lg sm:text-3xl font-bold">ESTIMATE EARNING POTENTIAL</h2>
           <form className=" flex flex-col sm:flex-row gap-4 w-4/5 max-w-[1150px] p-5">
             <div className="sm:w-3/5 flex flex-col gap-4">
@@ -278,7 +278,7 @@ export default function Home() {
           <p className="mt-3 text-center lg:text-lg ">Quick answers to questions you may have. Can not find what you are looking for?<br />
             <span className="hidden sm:flex" >out our full documentation</span></p>
 
-          <div className="sm:w-4/5 max-w-[800px] mt-5">
+          <div className=" sm:w-4/5 max-w-[800px] mt-5">
             {faqs.map((faq, index) => (
               <div key={index}>
                 <button
