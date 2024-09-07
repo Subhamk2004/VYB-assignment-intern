@@ -34,7 +34,6 @@ export default function Home() {
   }, [products, followers, setFollowers, setProducts])
 
 
-
   return (
     <div className="flex flex-col items-center">
       <main className="w-full flex flex-col items-center h-screen mt-24">
@@ -101,10 +100,14 @@ export default function Home() {
             <h2 className="text-xl sm:text-3xl font-bold">Products</h2>
             <div>
               <button>
+
                 <img src="/assets/images/Frame 1025.png"
                   className="w-40 sm:w-auto"
                 />
               </button>
+              {/* <button className="p-4 px-5 rounded-3xl text-white bg-[#003c3c] text-lg font-semibold">
+                Demo store
+              </button> */}
             </div>
           </div>
           <div className=" flex flex-row items-center justify-center gap-1 sm:gap-5 mt-16">
@@ -145,7 +148,7 @@ export default function Home() {
               </p>
               <button className="pb-1">
                 <img src="/assets/images/sec3Button.png"
-                  className="h-12"
+                  className="h-10 sm:h-12"
                 />
               </button>
             </div>
@@ -201,7 +204,7 @@ export default function Home() {
                   Let VYB the money now !! Its here and widthdraw it periodically.
                 </p>
                 <img src="/assets/images/sec3Mp4.png"
-                  className="w-full max-w-[260px] h-[550px]"
+                  className="h-[420px]  sm:w-full  max-w-[260px] sm:h-[550px]"
                 />
               </div>
             </div>
@@ -269,7 +272,9 @@ export default function Home() {
             </div>
           </form>
           <button>
-            <img src="/assets/images/calculateBtn.png" />
+            <img src="/assets/images/calculateBtn.png"
+            className="sm:w-auto w-24"
+            />
           </button>
         </section>
 
