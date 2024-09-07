@@ -93,14 +93,14 @@ const Navbar = () => {
                         className="h-3 w-3 ml-2"
                     />
                     {showMoreLg ?
-                        <div className="py-2 px-2 bg-gray-300 rounded-2xl absolute left-0 top-10 flex flex-col  shadow-lg shadow-gray-400">
+                        <div className="py-2 px-2 bg-gray-300 rounded-2xl absolute left-0 top-10 flex flex-col  shadow-lg shadow-gray-400 backdrop-filter backdrop-blur-lg bg-opacity-20">
                             <Link href="/profile"
-                                className="hover:bg-gray-500 py-2 hover:text-white hover:font-bold px-7 rounded-2xl"
+                                className=" py-2 hover:font-bold px-7 rounded-2xl"
                             >
                                 Profile
                             </Link>
                             <Link href="/login"
-                                className="hover:bg-gray-500 py-2 hover:text-white hover:font-bold px-7 rounded-2xl"
+                                className=" py-2 hover:font-bold px-7 rounded-2xl"
                             >
                                 Login
                             </Link>
