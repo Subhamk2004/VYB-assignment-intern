@@ -13,13 +13,13 @@ export default function SideMenu() {
     return (
         <div className='flex flex-col absolute -right-2 rounded-lg  backdrop-filter backdrop-blur-lg bg-opacity-30 bg-gray-400 border border-gray-200 p-2 px-4 w-[250px] justify-start items-start mt-10'>
             <img src='/assets/images/userPic.png'
-                className='w-1/2 mt-20'
+                className='w-1/2 mt-10'
             />
             <h2 className='text-2xl font-bold'>Samira Hadid</h2>
             <h3 className='text-lg font-semibold'>@samirahadid</h3>
 
-            <ul className='flex flex-col items-start gap-8'>
-                <Link href='/profile' className='flex flex-row items-center w-full gap-5 text-xl font-semibold pt-10'>
+            <ul className='flex flex-col items-start gap-6'>
+                <Link href='/profile' className='flex flex-row items-center w-full gap-5 text-xl font-semibold pt-8'>
                     <img src='/assets/images/sideuser.png'
                         className='w-7'
                     />

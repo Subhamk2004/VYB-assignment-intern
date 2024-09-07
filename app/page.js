@@ -96,8 +96,8 @@ export default function Home() {
           </ul>
         </section>
 
-        <section className="section2 h-4/5 w-full flex flex-col items-center p-[4%] max-p-[100px] bg-[#e5f0f1] mt-16 pb-[80px]">
-          <div className="p-3 sm:p-0 w-full flex flex-row justify-between">
+        <section className="section2 h-4/5 w-full flex flex-col items-center sm:p-[4%] p-2 max-p-[100px] bg-[#e5f0f1] mt-16 pb-[80px]">
+          <div className=" w-full flex flex-row justify-between">
             <h2 className="text-xl sm:text-3xl font-bold">Products</h2>
             <div>
               <button>
@@ -109,7 +109,7 @@ export default function Home() {
           </div>
           <div className=" flex flex-row items-center justify-center gap-1 sm:gap-5 mt-16">
             <img src="/assets/images/leftArrow.png"
-              className="w-10 sm:w-auto ml-2 sm:ml-0"
+              className="w-10 sm:w-auto"
             />
             <div className="flex flex-row items-center justify-between  sm:gap-5">
               <div className="w-3/5 flex flex-col ">
@@ -132,7 +132,7 @@ export default function Home() {
               </div>
             </div>
             <img src="/assets/images/rightArrow.png"
-              className="w-10 sm:w-auto mr-2 sm:mr-0" />
+              className="w-10 sm:w-auto" />
           </div>
         </section>
 
